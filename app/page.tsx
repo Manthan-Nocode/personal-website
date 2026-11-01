@@ -44,7 +44,7 @@ export default function Page() {
 
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
-      <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
+      <header className="flex w-full items-center justify-between px-6 py-6 lg:px-10">
         <a href="#top" className="group flex items-center gap-3" aria-label="Manthan home">
           <span className="grid size-9 place-items-center rounded-full border border-foreground bg-foreground text-sm font-bold text-background transition-transform group-hover:rotate-12">M</span>
           <span className="font-mono text-xs uppercase tracking-[0.18em]">Manthan<span className="text-coral">.</span></span>
