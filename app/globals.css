@@ -63,3 +63,13 @@ body { @apply bg-background text-foreground; font-family: Arial, Helvetica, sans
 .font-serif { font-family: Georgia, 'Times New Roman', serif; }
 .font-mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }
 ::selection { background: var(--coral); color: var(--foreground); }
+
+.manthan-avatar { position: relative; width: 4.5rem; height: 4.5rem; flex: 0 0 auto; overflow: hidden; border: 2px solid var(--foreground); border-radius: 48% 52% 45% 55%; background: var(--coral); animation: avatar-float 4s ease-in-out infinite; }
+.manthan-avatar::before { content: ''; position: absolute; inset: 1.1rem .65rem .55rem; border: 2px solid var(--foreground); border-radius: 45% 45% 48% 48%; background: var(--background); }
+.avatar-hair { position: absolute; left: .5rem; top: .35rem; width: 3.5rem; height: 1.35rem; border-radius: 60% 50% 35% 30%; background: var(--foreground); transform: rotate(-6deg); }
+.avatar-eye { position: absolute; top: 2.3rem; width: .3rem; height: .3rem; border-radius: 999px; background: var(--foreground); animation: avatar-blink 5s infinite; }
+.avatar-eye-left { left: 1.45rem; }.avatar-eye-right { right: 1.45rem; }
+.avatar-mouth { position: absolute; left: 1.85rem; top: 3.05rem; width: .8rem; height: .35rem; border-bottom: 2px solid var(--foreground); border-radius: 0 0 999px 999px; }
+@keyframes avatar-float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-4px) rotate(2deg); } }
+@keyframes avatar-blink { 0%, 46%, 50%, 100% { transform: scaleY(1); } 48% { transform: scaleY(.15); } }
+@media (prefers-reduced-motion: reduce) { .manthan-avatar, .avatar-eye { animation: none; } }
